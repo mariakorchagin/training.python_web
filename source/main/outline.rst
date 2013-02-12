@@ -361,6 +361,8 @@ framework. We will have the chance to repeat the class lab, or create another
 dynamic system using one of the many other python web frameworks available to
 us.
 
+`Week 5 Presentation <presentations/week05.html>`_
+
 Reading
 *******
 
@@ -371,6 +373,14 @@ Reading
 * `Unittest - Unit Testing Framework
   <http://docs.python.org/2.6/library/unittest.html>`_ - We will be writing
   tests from here forward. Start learning how.
+
+Please also skim this:
+
+* `sqlite3 - DB API for sqlite3
+  <http://www.doughellmann.com/PyMOTW/sqlite3/index.html>`_ - We'll need a bit
+  of familiarity with the sqlite3 module. How to open connections, execute
+  queries, and read the results from a cursor. Just read the first two
+  sections ('Creating a Database' and 'Retrieving Data').
 
 Before Class
 ************
@@ -396,27 +406,168 @@ specifically in class.
 
 * `Python Web Frameworks <http://wiki.python.org/moin/WebFrameworks>`_
 
+You may also want to do more reading on the unittest module:
+
+* `PyMOTW - unittest
+  <http://www.doughellmann.com/PyMOTW/unittest/index.html>`_
+
 Assignment
 **********
 
-Coming soon
+You can read the assignment at 
+
+http://github.com/cewing/training.python_web/blob/master/assignments/week05/athome/assignment.txt
+
+Please complete the assignment by noon on Sunday, February 10, 2013.
 
 Week 6 - Django
 ---------------
 
-**Date**: Feb. 19, 2013
+**Date**: Feb. 12, 2013
 
+In this class we'll get introduced to arguably the most popular full-stack
+Python web framework, Django. We'll build a simple application that introduces
+us to the basics of Models, Views and Templates.  We'll also learn about the 
+Django admin and how it can help us rapidly develop effective applications.
 
+We'll cover basic relational modeling and talk about how to create effective
+database schemas to model real-world problems.  We'll take a look at how the 
+Django ORM (and ORMs in general) can help shield Python developers from SQL.
+
+For our homework, we'll take a look at a set of specifications for a project
+and create a set of Django Models that will fulfill the specification.
+
+`Week 6 Presentation <presentations/week06.html>`_
+
+Reading
+*******
+
+* `Django at a Glance
+  <https://docs.djangoproject.com/en/1.4/intro/overview/>`_ - introduction to
+  the concepts and execution of Django
+
+* `Quick Install Guide
+  <https://docs.djangoproject.com/en/1.4/intro/install/>`_ - lightweight
+  instructions on installing Django. Use Python 2.6, not 2.5.    
+
+* `Django Tutorial, part 1
+  <https://docs.djangoproject.com/en/1.4/intro/tutorial01/>`_ - as noted
+  below, please actually follow the steps in the tutorial up until you reach
+  *Creating Models*
+
+Before Class
+************
+
+* Install Django 1.4.3. Use a Virtualenv and pip or easy_install. (see the
+  installation quick-start above, and the more in-depth guide below)
+
+* Install an RDBMS (I personally recommend PostgreSQL, but MySQL or any other
+  will do. We can even live with sqlite3, so long as you understand it is
+  **not for production**)
+
+* Set up a Django project. Walk through the first part of the tutorial above
+  until you reach *Creating Models*. **Do Not** create models)
+
+Reference
+*********
+
+* `Using Django <https://docs.djangoproject.com/en/1.4/topics/>`_ - far more
+  in-depth information about core topics in Django. Pay particular attention
+  to the installation documentation here.
+
+* `Django Design Philosophies
+  <https://docs.djangoproject.com/en/dev/misc/design-philosophies/>`_ - some
+  well-considered words on why Django is the way it is.
 
 Assignment
 **********
 
-To Be Decided
+Assignment
+**********
+
+You can read the assignment at 
+
+http://github.com/cewing/training.python_web/blob/master/assignments/week06/athome/assignment.txt
+
+Please complete the assignment by noon on Sunday, February 17, 2013.
 
 Week 7 - Django
 ---------------
 
-**Date**: Feb. 26, 2013
+**Date**: Feb. 19, 2013
+
+In this class we'll dive a bit further into Django. We'll take the app we 
+build for our week 6 homework and add style and security features.  Along the
+way we'll have a chance to learn more about Django's templates, models, views
+and forms.
+
+We'll also discuss extending the functionality of our application using
+existing Django **apps**. We'll see how these add-ons can help us to solve
+common problems like user registration and database schema management.
+
+Finally, we'll discuss some of the strengths and weaknesses of Django.  What 
+makes it a good choice for some projects but not for others.
+
+Our assignment for the week will be to enhance the application we build in
+class with some additional functionality.
+
+Reading
+*******
+
+* `Using Django <https://docs.djangoproject.com/en/1.4/topics/>`_ - far more
+  in-depth information about core topics in Django. Pay attention specifically
+  to the following topics (you'll want to follow links in these documents):
+
+  * `Models <https://docs.djangoproject.com/en/1.4/topics/db/models/>`_ -
+    details of the django modelling system. How to represent data for,
+    relationships between and the presentation of your objects.
+
+  * `Queries <https://docs.djangoproject.com/en/1.4/topics/db/queries/>`_ -
+    basic information about the Django ORM and how to use it to create,
+    retrieve, update and delete objects.
+
+  * `Working with Forms
+    <https://docs.djangoproject.com/en/1.4/topics/forms/>`_ - how to create,
+    display, and process forms in Django, including forms that are associated
+    with a given model.
+
+  * `The Django Template Language
+    <https://docs.djangoproject.com/en/1.4/topics/templates/>`_ - learn
+    template basics like variables, filters, tags and blocks, and learn about
+    template inheritance.
+
+  * `Class-based Generic Views
+    <https://docs.djangoproject.com/en/1.4/topics/class-based-views/>`_ - an
+    introduction to the simplest way to present your objects to your adoring
+    public.
+
+  * `Testing Django Applications
+    <https://docs.djangoproject.com/en/1.4/topics/testing/>`_ - learn
+    different approaches to testing Django applications, including unit
+    testing and doctests.
+
+Before Class
+************
+
+We'll be adding a new bit of functionality to our app, and we'll do this not
+by developing it ourselves, but by *integrating* an existing add-on. Before
+class begins, please install `django-south
+<http://south.readthedocs.org/en/0.7.6>`_ and `django-registration
+<http://docs.b-list.org/django-registration/0.8/>`_ into your Django
+virtualenv.
+
+Reference
+*********
+
+* `SQLAlchemy and You <http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/>`_
+  - A really in-depth look at the differences between the Django ORM and the
+  reigning king of Python database integration, SQLAlchemy.
+
+* `About Django from the Pyramid Guy
+  <http://www.djangocon.us/schedule/presentations/22/>`_ - a talk given at
+  DjangoCon 2012 by Chris McDonough, one of the driving forces behind the
+  Pyramid framework. Also available in `video form
+  <http://www.youtube.com/watch?v=eN7h6ZbzMy0>`_.
 
 Assignment
 **********
@@ -426,7 +577,7 @@ To Be Decided
 Week 8 - Pyramid
 ----------------
 
-**Date**: Mar. 5, 2013
+**Date**: Feb. 26, 2013
 
 Assignment
 **********
@@ -436,7 +587,7 @@ To Be Decided
 Week 9 - The Cloud
 ------------------
 
-**Date**: Feb. 12, 2013
+**Date**: Mar. 5, 2013
 
 Assignment
 **********
