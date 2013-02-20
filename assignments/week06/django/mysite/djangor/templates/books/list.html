@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>My Python Books</h1>
+<h1>My Books</h1>
 {% for book in books %}
 <div class="books">
   <div><a href="{% url books_detail book.pk %}">{{ book.title }}</a> by {{ book.author }}<div>

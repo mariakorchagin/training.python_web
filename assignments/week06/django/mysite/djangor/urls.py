@@ -1,6 +1,10 @@
 from django.conf.urls import patterns, url
 from django.views.generic import ListView, DetailView
+from django.contrib.auth.decorators import login_required
 from djangor.models import Books
+from djangor.forms import BookForm
+# from djangor.views import AddEntryView
+from django.views.generic import CreateView
 
 
 urlpatterns = patterns('',
@@ -15,8 +19,12 @@ urlpatterns = patterns('',
         template_name="books/detail.html"),
     name="books_detail"),
 
-  url(r'^add/$', DetailView.as_view(
-        model=Books,
-        template_name="books/add.html"),
-    name="books_add"),
+  url(r'^add/$',
+        login_required(CreateView.as_view(
+            model=Books,
+            form_class=BookForm,
+            template_name="books/add.html",
+            success_url="/djangor/",
+        )),
+        name="books_add"),
 )

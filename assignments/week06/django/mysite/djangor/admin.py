@@ -8,7 +8,7 @@ from djangor.models import Books
 #   
 
 class BookAdmin(admin.ModelAdmin):
-  list_display = ('pub_date','title','author','isbn')
+  list_display = ('pub_date','title','author','isbn','publisher')
   list_filter = ('pub_date', )
   ordering = ('pub_date', )
 #   inlines = (ChoiceInline,)
